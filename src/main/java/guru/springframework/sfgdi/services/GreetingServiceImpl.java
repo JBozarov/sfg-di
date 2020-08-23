@@ -1,6 +1,6 @@
 package guru.springframework.sfgdi.services;
 
-public class GreenServiceImpl implements GreetingService {
+public class GreetingServiceImpl implements GreetingService {
 
 	@Override
 	public String sayGreeting() {
