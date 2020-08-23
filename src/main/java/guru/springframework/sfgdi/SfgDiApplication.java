@@ -5,15 +5,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import guru.springframework.sfgdi.controllers.MyController;
+import guru.springframework.sfgdi.controllers.SomeController;
 
 @SpringBootApplication
 public class SfgDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+		
 		MyController myController = (MyController) ctx.getBean("myController"); 
 		String greeting = myController.sayHello(); 
 		System.out.println(greeting);
+	
+		SomeController someController = (SomeController) ctx.getBean("someController"); 
+		int some = someController.doSomeMath(); 
+		System.out.println(some);
+		
 	}
 
 }
